@@ -84,11 +84,13 @@ A histogram and box plot were used to visualize fare distribution:
  **Fare Distribution**
   Understanding how fares are distributed provides key insights into ride pricing and customer behavior. This analysis helps Uber assess the typical cost of rides, detect pricing anomalies, and fine-tune fare models.
 
----
-Peak Ride Hours: The most significant ride volumes occur between 6 PM and 7 PM, coinciding with evening rush hours and high commuter demand. Extended high activity persists from 6 PM to 8 PM.
-Weekly Trends: Fridays experience the highest ridership, likely due to end-of-week social and professional activities.
-Daytime Activity: Ride volumes steadily rise from 8 AM through 4 PM, followed by a sharp decline post 8 PM, reflecting typical urban commute and leisure patterns.
-Low Activity Periods: Overnight and early morning hours (12 AM to 5 AM) show minimal ride counts, as expected.
+**Peak Ride Hours**: The most significant ride volumes occur between 6 PM and 7 PM, coinciding with evening rush hours and high commuter demand. Extended high activity persists from 6 PM to 8 PM.
+
+**Weekly Trends**: Fridays experience the highest ridership, likely due to end-of-week social and professional activities.
+
+**Daytime Activity**: Ride volumes steadily rise from 8 AM through 4 PM, followed by a sharp decline post 8 PM, reflecting typical urban commute and leisure patterns.
+
+**Low Activity Periods**: Overnight and early morning hours (12 AM to 5 AM) show minimal ride counts, as expected.
 
 ![Fare Distribution](<screenshoots/Fare amount_hour.png>)  
 ![Fare Distribution](<screenshoots/Fare amount_day.png>)  
@@ -105,7 +107,6 @@ Low Activity Periods: Overnight and early morning hours (12 AM to 5 AM) show min
 3. **Geographic Hotspots**:
    - Airport trips account for 18% of premium fares
 
----
 4. **Dax sample formula**:
  The DAX formulas that were implemented include:
 
