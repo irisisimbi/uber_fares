@@ -1,6 +1,7 @@
 **Student:** Isimbi Mushimire Iris 
 
-**ID**: 27121  
+**ID**: 27121 
+
 **Course:** Introduction to Big Data Analytics     
 
 
@@ -35,6 +36,7 @@ This process focused on removing inconsistencies, standardizing formats, and enh
 - **Power BI Desktop**: Primary dashboard development
 - **Custom Visuals**: Heatmap, Violin plot (from Marketplace)
 - **GitHub**: Version control and submission
+
 **Heapmap**:
 
 ![Heatmap Screenshot](<screenshoots/Ride volume day_hour.png>)
@@ -46,6 +48,8 @@ This process focused on removing inconsistencies, standardizing formats, and enh
 **GitHub**:
 
 https://github.com/irisisimbi/Uber_fares.git
+
+---
 
 ## **3. Analysis & Findings**
 After thorough data cleaning and feature engineering, the refined dataset was imported into Power BI Desktop for advanced analysis and visualization. A series of interactive and dynamic dashboards were developed to comprehensively explore multiple facets of Uber ride data. These dashboards enable intuitive user interaction, such as filtering by time intervals, geographic locations, and fare ranges, supporting detailed data-driven insights.
@@ -109,6 +113,9 @@ Low Activity Periods: Overnight and early morning hours (12 AM to 5 AM) show min
 -Time-based measures such as peak hour identification
 
 ![Dax](<screenshoots/Dax.png>)  
+
+---
+
 ## **4. Recommendations**
 1. **Dynamic Pricing**:
    - Increase surge pricing during identified peak hours (7-9 AM, 5-7 PM)
@@ -137,40 +144,30 @@ Peak Ride Times occured using ride volume day and hour.
 
 ---
 
-## 4. 💡 Recommendations
+##  Recommendations
 
 Based on the insights gained from the data analysis, the following recommendations are proposed to help Uber optimize pricing, improve customer service, and enhance operational efficiency:
 
----
-
-### 1. 🕒 Implement Dynamic Pricing During Peak Hours
+ ### Implement Dynamic Pricing During Peak Hours
 - **Finding:** Highest demand occurs during **7–9 AM** and **5–7 PM** on weekdays, especially **Fridays**.
 - **Recommendation:** Apply **surge pricing** or **dynamic fare models** during these hours to maximize revenue and manage demand more efficiently.
 
----
-
-### 2. 👨‍✈️ Increase Driver Availability on Fridays
+### Increase Driver Availability on Fridays
 - **Finding:** Friday ride volume increases by approximately **40%** compared to other weekdays.
 - **Recommendation:** Offer **driver incentives** or **bonus schemes** to ensure enough availability in high-demand zones (e.g., city centers, event venues).
 
----
-
-### 3. ✈️ Prioritize Airport Routes
+ Prioritize Airport Routes
 - **Finding:** Airport rides contribute to **18% of premium fares** and often fall in the high-outlier fare range.
 - **Recommendation:** Design **dedicated airport pickup strategies**, including:
   - Express lanes
   - Driver rewards
   - Predictive demand monitoring
 
----
-
-### 4. 🌧️ Plan for Weather-Driven Fare Adjustments
+  ### Plan for Weather-Driven Fare Adjustments
 - **Insight (hypothetical):** Fares are **32% higher on rainy days**.
 - **Recommendation:** Integrate **real-time weather APIs** into pricing models to enable **proactive surge pricing** and dispatch planning during bad weather.
 
----
-
-### 5. 📍 Optimize Pricing for Short-Distance Rides
+### Optimize Pricing for Short-Distance Rides
 - **Finding:** Short rides under 2 miles have a **higher cost per mile**, which may seem unfair to customers.
 - **Recommendation:** Consider revising base fare or introducing **micro-ride discounts** for frequent short-distance users (e.g., Uber Pool or eco rides).
 
