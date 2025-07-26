@@ -1,0 +1,78 @@
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('uber.csv')
+
+print(df.shape)
+print(df.info())
+print(df.describe())
+print(df.head())
+
+print(df.isnull().sum())
+df = df.dropna()  
+df = df[df['fare_amount'] > 0]  
+
+df.to_csv('uber_fares_cleaned.csv', index=False)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+print(df['fare_amount'].mean())
+print(df['fare_amount'].median())
+print(df['fare_amount'].mode()[0])
+print(df['fare_amount'].std())
+print(df['fare_amount'].quantile([0.25, 0.5, 0.75]))
+print(df['fare_amount'].max() - df['fare_amount'].min())
+
+sns.boxplot(x=df['fare_amount'])
+plt.title("Fare Amount Boxplot")
+plt.show()
+
+sns.histplot(df['fare_amount'], bins=50, kde=True)
+plt.title("Fare Distribution")
+plt.show()
+
+sns.scatterplot(x=df['fare_amount'])
+plt.title("Fare Amount Boxplot")
+plt.show()
+
+df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime'])
+df['hour'] = df['pickup_datetime'].dt.hour
+sns.boxplot(x='hour', y='fare_amount', data=df)
+plt.title("Fare Amount by Hour of Day")
+plt.show()
+
+df['day'] = df['pickup_datetime'].dt.day
+df['month'] = df['pickup_datetime'].dt.monthsn
+df['weekday'] = df['pickup_datetime'].dt.day_name()
+df['is_peak'] = df['hour'].apply(lambda x: 1 if 7 <= x <= 9 or 17 <= x <= 19 else 0)
+
+df = pd.get_dummies(df, columns=['weekday'], drop_first=True)
+
+from math import radians, cos, sin, asin, sqrt
+def haversine(lat1, lon1, lat2, lon2):
+    # Convert degrees to radians
+    lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+    
+    # Differences
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+
+    # Haversine formula
+    a = sin(dlat/2)**2 + cos(lat1)*cos(lat2)*sin(dlon/2)**2
+    c = 2 * asin(sqrt(a))
+    
+    # Radius of Earth in km (6371 km)
+    distance = 6371 * c
+    return distance
+df['trip_distance_km'] = df.apply(lambda row: haversine(
+    row['pickup_latitude'], row['pickup_longitude'],
+    row['dropoff_latitude'], row['dropoff_longitude']
+), axis=1)
+sns.scatterplot(x=df['trip_distance_km'], y=df['fare_amount'])
+plt.title("Fare Amount vs Trip Distance")
+plt.xlabel("Distance (km)")
+plt.ylabel("Fare ($)")
+plt.show()
+
+df.to_csv('uber_fares_enhanced.csv', index=False)

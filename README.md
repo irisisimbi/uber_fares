@@ -4,7 +4,7 @@
 
 # Uber Fares Analysis - Power BI Dashboard
 
-![Dashboard Screenshot](screenshots/final_dashboard.png)  
+![Dashboard Screenshot](screenshots/Dashboard.png)  
 *Figure 1: Interactive Power BI Dashboard*
 
 ---
@@ -39,7 +39,7 @@ This project analyzes Uber trip data to identify:
 ![Time Analysis](screenshots/time_analysis.png)  
 *Figure 2: Hourly ride patterns showing peak demand at 8 AM and 6 PM*
 
-![Fare Distribution](screenshots/fare_boxplot.png)  
+![Fare Distribution](screenshots/Fair distribution.png)  
 *Figure 3: Box plot revealing fare outliers (>$100)*
 
 ### **Insights Discovered**
