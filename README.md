@@ -4,7 +4,8 @@
 
 # Uber Fares Analysis - Power BI Dashboard
 
-![Dashboard Screenshot](screenshots/Dashboard.png)  
+![Dashboard Screenshot](screenshoots/Dashboard.png)
+
 *Figure 1: Interactive Power BI Dashboard*
 
 ---
@@ -36,10 +37,13 @@ This project analyzes Uber trip data to identify:
 ## **3. Analysis & Findings**
 ### **Key Visualizations**
 
-![Time Analysis](screenshots/time_analysis.png)  
+![Time Analysis](<screenshoots/time analysis.png>)
+
+![Time Analysis](<screenshoots/data loading.png>)
 *Figure 2: Hourly ride patterns showing peak demand at 8 AM and 6 PM*
 
-![Fare Distribution](screenshots/Fair distribution.png)  
+![Fare Distribution](<screenshoots/Fair distribution.png>)  
+![alt text](<screenshoots/data cleaning.png>)
 *Figure 3: Box plot revealing fare outliers (>$100)*
 
 ### **Insights Discovered**
@@ -55,7 +59,7 @@ This project analyzes Uber trip data to identify:
    - Airport trips account for 18% of premium fares
 
 ---
-
+![Dax](<screenshoots/Dax.png>)  
 ## **4. Recommendations**
 1. **Dynamic Pricing**:
    - Increase surge pricing during identified peak hours (7-9 AM, 5-7 PM)
@@ -85,8 +89,6 @@ This analysis successfully identified:
 
 **Future Work**: Integrate weather API for real-time fare predictions.
 
-
-## **Repository Structure**
 
 
 
