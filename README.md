@@ -79,7 +79,7 @@ A histogram and box plot were used to visualize fare distribution:
 - Most rides had fare amounts
 ![Time Analysis](<screenshoots/time analysis.png>)
 
-![Fare Distribution](<screenshoots/Fair distribution.png>) 
+![Fare Distribution](<screenshoots/Fair distribution.png>)   ![Fare Distribution](<screenshoots/Boxplot fare amount.png>) 
 
  **Fare Distribution**
   Understanding how fares are distributed provides key insights into ride pricing and customer behavior. This analysis helps Uber assess the typical cost of rides, detect pricing anomalies, and fine-tune fare models.
